@@ -35,6 +35,8 @@ if (ENDPOINT) {
   s3options.endpoint = new AWS.Endpoint(ENDPOINT);
 }
 
+s3options.region = "eu-nl-1"
+
 const s3 = new S3(s3options);
 const destinationDir = DESTINATION_DIR === '/' ? shortid() : DESTINATION_DIR;
 const paths = klawSync(SOURCE_DIR, {

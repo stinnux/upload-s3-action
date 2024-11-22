@@ -32,7 +32,7 @@ const s3options = {
 };
 
 if (ENDPOINT) {
-  s3options.endpoint = ENDPOINT;
+  s3options.endpoint = new AWS.Endpoint(ENDPOINT);
 }
 
 const s3 = new S3(s3options);

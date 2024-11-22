@@ -37,6 +37,8 @@ if (ENDPOINT) {
 
 s3options.region = "eu-nl-1"
 
+core.info(s3options);
+
 const s3 = new S3(s3options);
 const destinationDir = DESTINATION_DIR === '/' ? shortid() : DESTINATION_DIR;
 const paths = klawSync(SOURCE_DIR, {
